@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<!-- saved from url=(0085)file:///Users/ahmetdemirci/Downloads/LIFE_HURTS___Development_Bible__ReelSage__1.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>LIFE HURTS — Development Bible — ReelSage Studios</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Barlow:ital,wght@0,200;0,300;0,400;0,500;0,600;1,300;1,400&family=Barlow+Condensed:wght@300;400;500;600;700&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bk:#060606;--bk2:#0b0b0b;--dk:#141414;--dk2:#1b1b1b;
+  --mid:#3e3e3e;--lt:#6e6e6e;--sl:#999;
+  --ow:#cdc8c1;--ww:#e8e3dc;--bright:#f5f0ea;
+  --gd:#c9a227;--gdd:#8a6c1e;
+}
+html{
+  background:var(--bk);color:var(--ow);
+  font-family:'Barlow',sans-serif;font-weight:300;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+::selection{background:var(--gd);color:var(--bk)}
+
+/* ── TYPOGRAPHY ── */
+.serif{font-family:'Cormorant Garamond',serif}
+.condensed{font-family:'Barlow Condensed',sans-serif}
+
+.lbl{
+  font-family:'Barlow Condensed',sans-serif;font-weight:500;
+  font-size:.5rem;letter-spacing:.42em;color:var(--gd);
+  text-transform:uppercase;margin-bottom:1rem;
+}
+.cap{font-size:.52rem;color:var(--mid);letter-spacing:.03em;line-height:1.5;margin-top:3px;margin-bottom:1.2rem}
+.cap b{color:var(--gdd);font-weight:400}
+
+/* ── PROSE ── */
+.prose{font-size:.86rem;line-height:1.82;color:var(--ow);margin-bottom:.85rem;max-width:480px}
+.prose em{color:var(--ww);font-weight:400}
+.prose-dense{font-size:.82rem;line-height:1.7;color:#aaa;margin-bottom:.75rem;max-width:480px}
+.prose-dense em{color:var(--ow);font-weight:400}
+.prose-air{font-size:.9rem;line-height:2;color:var(--ow);margin-bottom:1rem;max-width:460px}
+.prose-air em{color:var(--bright);font-weight:400}
+
+/* ══════════════════════════════════════════════════
+   THE PULL-QUOTE PAGES — the human touch
+   These are moments, not sections. They breathe.
+   ══════════════════════════════════════════════════ */
+.moment{
+  min-height:50vh;display:flex;align-items:center;
+  justify-content:center;padding:10vh 10vw;
+  background:var(--bk);text-align:center;
+}
+.moment-text{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:300;font-style:italic;
+  font-size:clamp(1rem,2vw,1.35rem);
+  line-height:1.9;color:var(--sl);max-width:420px;
+}
+.moment-text .bright{color:var(--bright);font-weight:400}
+.moment-attr{
+  font-family:'Barlow Condensed',sans-serif;font-weight:400;
+  font-size:.52rem;letter-spacing:.25em;color:var(--mid);
+  text-transform:uppercase;margin-top:1.2rem;
+}
+
+/* ══════════════════════════════════════════════════
+   HERO
+   ══════════════════════════════════════════════════ */
+.hero{
+  height:100vh;position:relative;overflow:hidden;
+  background:var(--bk);display:flex;align-items:flex-end;
+}
+.hero-bg{
+  position:absolute;top:0;right:0;width:58%;height:100%;
+  object-fit:cover;object-position:center top;
+  opacity:.4;filter:grayscale(15%) contrast(1.2);
+  mask-image:linear-gradient(to right,transparent 0%,black 40%);
+  -webkit-mask-image:linear-gradient(to right,transparent 0%,black 40%);
+}
+.hero-content{
+  position:relative;z-index:2;padding:0 6vw 6vh;max-width:500px;
+}
+.hero h1{
+  font-family:'Cormorant Garamond',serif;font-weight:300;
+  font-size:clamp(2.4rem,5.5vw,4.2rem);letter-spacing:.24em;
+  color:var(--bright);line-height:1;margin-bottom:.5rem;
+}
+.hero-sub{
+  font-weight:200;font-size:.72rem;color:var(--gd);
+  letter-spacing:.08em;line-height:1.6;margin-bottom:2rem;
+}
+.hero-logline{
+  font-family:'Cormorant Garamond',serif;font-weight:300;font-style:italic;
+  font-size:clamp(.85rem,1.15vw,1rem);line-height:1.9;
+  color:var(--sl);
+}
+.hero-meta{
+  margin-top:1.8rem;font-family:'Barlow Condensed',sans-serif;font-weight:400;
+  font-size:.55rem;letter-spacing:.22em;color:var(--mid);text-transform:uppercase;
+}
+
+/* ══════════════════════════════════════════════════
+   IMAGE LAYOUTS
+   ══════════════════════════════════════════════════ */
+.img-bleed{width:100%;display:block;height:auto}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:2px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.grid2 img,.grid3 img{width:100%;height:auto;object-fit:cover;display:block}
+.grid2{align-items:start}
+.grid3{align-items:start}
+
+/* ══════════════════════════════════════════════════
+   SECTIONS
+   ══════════════════════════════════════════════════ */
+.sec{padding:6vh 7vw;border-top:1px solid var(--dk2)}
+
+/* ══════════════════════════════════════════════════
+   ACT HEADERS
+   ══════════════════════════════════════════════════ */
+.act-hd{
+  font-family:'Barlow Condensed',sans-serif;font-weight:600;
+  font-size:.55rem;letter-spacing:.32em;color:var(--gd);
+  text-transform:uppercase;margin-bottom:.7rem;
+  padding-bottom:.35rem;border-bottom:1px solid var(--dk2);
+}
+.act-hd span{font-weight:300;color:var(--mid);margin-left:.5em;letter-spacing:.08em}
+
+/* ══════════════════════════════════════════════════
+   BATH
+   ══════════════════════════════════════════════════ */
+.bath-row{display:grid;grid-template-columns:82px 1fr;gap:0 .8rem;margin-bottom:.35rem;max-width:460px}
+.bath-l{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:.5rem;letter-spacing:.12em;color:var(--gd);text-transform:uppercase;padding-top:.1rem}
+.bath-r{font-size:.75rem;line-height:1.55;color:var(--ow)}
+.bath-r em{color:var(--bright)}
+
+/* ══════════════════════════════════════════════════
+   COLOR ROWS
+   ══════════════════════════════════════════════════ */
+.clr-row{display:grid;grid-template-columns:68px 1fr;gap:0 .6rem;margin-bottom:.5rem;max-width:460px}
+.clr-l{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:.48rem;letter-spacing:.1em;text-transform:uppercase;padding-top:.1rem}
+.clr-r{font-size:.75rem;line-height:1.5}
+
+/* ══════════════════════════════════════════════════
+   COMPS
+   ══════════════════════════════════════════════════ */
+.cmp{margin-bottom:1rem;padding-bottom:.8rem;border-bottom:1px solid var(--dk2);max-width:460px}
+.cmp:last-of-type{border-bottom:none}
+
+/* ══════════════════════════════════════════════════
+   CONTACT
+   ══════════════════════════════════════════════════ */
+.contact{
+  display:flex;flex-direction:column;align-items:center;
+  padding:6vh 7vw;text-align:center;border-top:2px solid var(--gd);
+  background:var(--bk);
+}
+
+@media print{
+  .hero,.moment{page-break-after:always}
+  section{page-break-inside:avoid}
+}
+
+
+/* ══════════════════════════════════════════════════
+   RESPONSIVE — Mobile + Tablet + MacBook
+   ══════════════════════════════════════════════════ */
+
+/* Ensure images never overflow */
+img{max-width:100%;height:auto}
+
+/* Grid images on mobile */
+@media(max-width:768px){
+  .hero{height:100svh;align-items:flex-end}
+  .hero-bg{width:100%;opacity:.3;
+    mask-image:linear-gradient(to top,transparent 0%,black 40%);
+    -webkit-mask-image:linear-gradient(to top,transparent 0%,black 40%);
+  }
+  .hero-content{padding:0 5vw 5vh;max-width:100%}
+  .hero h1{font-size:2.2rem;letter-spacing:.18em}
+  .hero-logline{font-size:.88rem}
+
+  .moment{min-height:40vh;padding:8vh 6vw}
+  .moment-text{font-size:1rem !important}
+
+  .sec{padding:5vh 5vw}
+
+  .grid2{grid-template-columns:1fr;gap:2px}
+  .grid3{grid-template-columns:1fr;gap:2px}
+  .grid2 img,.grid3 img{max-height:300px}
+
+  .prose,.prose-dense,.prose-air{font-size:.88rem;line-height:1.75;max-width:100%}
+
+  .bath-row{grid-template-columns:70px 1fr;gap:0 .6rem}
+  .bath-l{font-size:.48rem}
+  .bath-r{font-size:.72rem}
+
+  .clr-row{grid-template-columns:60px 1fr;gap:0 .5rem}
+  .clr-l{font-size:.45rem}
+  .clr-r{font-size:.72rem}
+
+  .act-hd{font-size:.52rem}
+  .act-hd span{display:block;margin-left:0;margin-top:.2rem}
+
+  .lbl{font-size:.48rem;letter-spacing:.3em}
+
+  .img-bleed{height:40vh}
+
+  .contact{padding:5vh 5vw}
+}
+
+/* Tablet */
+@media(min-width:769px) and (max-width:1024px){
+  .hero-content{max-width:420px}
+  .grid3{grid-template-columns:repeat(3,1fr)}
+  .sec{padding:6vh 6vw}
+}
+
+/* Large screens / MacBook Pro */
+@media(min-width:1440px){
+  .hero-content{max-width:550px}
+  .hero h1{font-size:4.5rem}
+  .prose,.prose-dense,.prose-air{max-width:520px}
+  .moment-text{font-size:1.3rem !important}
+  .sec{padding:7vh 8vw}
+}
+
+/* Touch/hover for smooth scrolling */
+html{scroll-behavior:smooth}
+
+/* Prevent text from being too wide on any screen */
+p{max-width:min(100%,580px)}
+
+/* Safe area for notched phones */
+@supports(padding:max(0px)){
+  body{
+    padding-left:env(safe-area-inset-left);
+    padding-right:env(safe-area-inset-right);
+  }
+}
+
+.pair-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px}
+@media(max-width:768px){
+  .pair-grid{grid-template-columns:1fr 1fr;gap:2px}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     THE HARLEQUIN
+     ═══════════════════════════════════════════ -->
+<section class="hero">
+  <img class="hero-bg" src="images/image-01.jpg" alt="">
+  <div class="hero-content">
+    <p class="hero-sub" style="margin-bottom:1.5rem">Based on a true story. South Africa, 1983.</p>
+    <h1 style="margin-bottom:1.8rem">LIFE HURTS</h1>
+    <p class="hero-logline" style="margin-bottom:2.5rem">A fifteen-year-old boy paints himself into a harlequin to escape his small-town invisibility — and is swept into the streets of Johannesburg by a magnetic, damaged woman who promises to look after him. Over eighteen months of drugs, sex work, and survival, he discovers that the mask he built to be seen is the same mask he must remove to stay alive.</p>
+    <p class="hero-meta">Feature Film  ·  100–115 min  ·  Drama  ·  $2–5M</p>
+  </div>
+  
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SANDY — She stops everything.
+     ═══════════════════════════════════════════ -->
+<div class="moment" style="min-height:60vh;background:var(--bk)">
+  <div style="max-width:380px">
+    <div class="lbl" style="text-align:center">Sandy</div>
+    <p class="moment-text" style="text-align:center;font-size:clamp(.88rem,1.3vw,1.08rem)">No last name. One photograph.<br>Eighteen months that almost erased him.</p>
+    <p style="font-size:.72rem;line-height:1.7;color:var(--lt);text-align:center;margin-top:1.5rem">She washes his face like a mother.<br>Then forges prescriptions with surgical precision.<br>Then spends every cent on drugs.<br>Then asks him to sit with her in the bath<br>because she cannot bear to be alone.</p>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     FACET — The world she pulled him into
+     ═══════════════════════════════════════════ -->
+<section style="background:var(--bk);padding:3vh 5vw 4vh">
+  <div class="grid3">
+    <img src="images/image-02.jpg" alt="">
+    <img src="images/image-03.jpg" alt="">
+    <img src="images/image-04.jpg" alt="">
+  </div>
+  <div style="padding:0 2vw"><p class="cap"><b>FACET Magazine</b> — Durban, 1983. The alternative scene on paper. These are not reference images. These are real.</p></div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     FILMMAKER'S VISION
+     ═══════════════════════════════════════════ -->
+<section class="sec" style="background:var(--bk2)">
+  <img src="images/image-05.jpg" alt="" style="width:30px;opacity:.35;margin-bottom:1.5rem">
+  <div class="lbl">Filmmaker's Vision</div>
+  <div style="max-width:480px">
+    <p class="prose">Paul Smit trusted me with this story. He has one photograph of Sandy. One image from eighteen months that almost erased him. When a person gives you that — their worst memories, their trust that you will not sensationalize what nearly destroyed them — you do not take it lightly.</p>
+    <p class="prose">I am not making a drug film. I am making a film about what it feels like to be fifteen and invisible — and what happens when the first person who finally sees you is also the person who will cost you everything.</p>
+    <p class="prose">That gap — between what Paul believes is happening and what the audience knows is happening — is the engine of every scene. It never stops running.</p>
+    <p class="prose">There is no sexual relationship between Paul and Sandy. The intimacy is entirely emotional — and that is precisely what makes it so difficult to escape. She needs a witness. He needs to be needed. That contract is more binding than anything physical, and nearly as destructive.</p>
+  </div>
+  <div style="text-align:right;max-width:480px;margin-top:1rem">
+    <span style="font-family:&#39;Cormorant Garamond&#39;,serif;font-style:italic;font-size:.88rem;color:var(--gd)">— Ayla Demirci</span>
+    <span style="display:block;font-size:.55rem;color:var(--mid);margin-top:.12rem;letter-spacing:.04em">Writer / Director  ·  ReelSage Studios</span>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     THE WORLD — Proof it existed
+     ═══════════════════════════════════════════ -->
+<section style="background:var(--bk);padding:6vh 5vw 5vh;border-top:1px solid var(--dk2)">
+  <div style="padding:0 2vw"><div class="lbl">The World — Durban, 1983</div></div>
+  
+  <div class="grid2" style="height:auto">
+    <img src="images/image-06.jpg" alt="">
+    <img src="images/image-07.jpg" alt="">
+  </div>
+  <div style="padding:0 3vw"><p class="cap">Left: Paul. Right: Inside the club — performance, costume, identity.</p></div>
+  <div class="grid2" style="margin-top:2px">
+    <img src="images/image-08.jpg" alt="" style="object-position:center top">
+    <img src="images/image-09.jpg" alt="" style="object-position:center top">
+  </div>
+  <div style="padding:0 3vw"><p class="cap"><b>Helge</b> — DJ at Faces.   <b>Ruby</b> — a regular.</p></div>
+  
+</section>
+
+
+
+<!-- ═══════════════════════════════════════════
+     MOMENT: The Conductor
+     ═══════════════════════════════════════════ -->
+<div class="moment">
+  <div>
+    <p class="moment-text"><span class="bright">"Why do you feel the need to dress this way?"</span></p>
+    <p class="moment-attr">The conductor — the only adult who sees through the mask</p>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     FACES — The answer
+     ═══════════════════════════════════════════ -->
+<section style="background:var(--bk);padding:5vh 7vw;display:flex;justify-content:center">
+  <div style="max-width:420px;text-align:center">
+    <img src="images/image-10.jpg" alt="" style="width:100%;height:auto;display:block">
+    <p style="font-family:&#39;Barlow Condensed&#39;,sans-serif;font-weight:400;font-size:.48rem;letter-spacing:.3em;color:var(--mid);text-transform:uppercase;margin-top:6px">Faces — Durban</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     FACES INTERIOR — What's inside
+     ═══════════════════════════════════════════ -->
+<section>
+  <img src="images/image-11.png" alt="" style="width:100%;height:auto;display:block">
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     THE TRAIN — The journey begins
+     ═══════════════════════════════════════════ -->
+<section>
+  <img class="img-bleed" src="images/image-12.png" alt="" style="height:auto;opacity:.65;max-width:100%">
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     ACT ONE — Propulsive
+     ═══════════════════════════════════════════ -->
+<section class="sec" style="background:var(--bk2)">
+  <div class="lbl">The Story</div>
+  <div class="act-hd">ACT ONE — THE MASK <span>Umkomaas → Durban → Sandy</span></div>
+  <p class="prose">Paul is fifteen. He lives in Umkomaas, a small conservative town on the KwaZulu-Natal coast. His parents drink. They come home at ten or eleven from the bowling club, find him on the couch, go to their room. He sleeps there most nights because his own room doesn't feel like his.</p>
+  <p class="prose">He breaks into the school hall and sleeps there instead. Walks the rafters at night. Raids the teachers' fridge. Spends his breaks dancing alone on stage, acting out stories no one watches. He cons twenty new spotlights out of the principal. He builds a city out of cardboard — a hundred tiny lights, an orange sky. He lies on the stage floor at night and watches it glow. The school play happens. The principal thanks him publicly. He listens to the applause. For a moment, he is worthwhile.</p>
+  <p class="prose">The only person who truly sees him is the mother of a girl killed crossing the tracks — a woman who makes him a custom outfit without judgment. The harlequin. She never once objects to the look.</p>
+  <p class="prose">On a Friday evening, Paul steals R96 from his mother's dresser, boards a train, transforms. White face, black triangles, black lips. At Faces, he dances alone and feels like a king.</p>
+  <p class="prose">Sandy materializes. <em>"You look and dance fantastically."</em> By dawn she has offered him Johannesburg. By the next evening she has forged a prescription, thrown a drafting set square into her mother's skull, and talked Paul into leaving home. His brother: <em>"Do you know what you are doing?"</em> Neil: <em>"You don't know Sandy, and she is a world of trouble."</em> Paul puts up a wall and packs a bag.</p>
+  <p class="prose">A man puts a gun to his head in a club restroom and pulls the trigger. The bullet ricochets off two walls and into his foot. Sandy kneels beside him and places two pills in his mouth. At a train station she sinks a needle into his arm. His body floods with cold liquid and his head fills with a wave of dreams. They all laugh at him. They stand on the highway.</p>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     THE JOINT — Last breath of freedom
+     ═══════════════════════════════════════════ -->
+<section>
+  <img src="images/image-13.png" alt="" style="width:100%;height:auto;display:block">
+</section>
+
+
+
+<!-- ═══════════════════════════════════════════
+     ACT TWO — Dense. Suffocating.
+     ═══════════════════════════════════════════ -->
+<section class="sec" style="background:var(--bk)">
+  <div class="act-hd">ACT TWO — THE GRIP <span>Johannesburg · The spiral</span></div>
+  <p class="prose-dense">Killmury is a squat on Smit Street. Second floor. Hippies who eat Hare Krishna food once a week and fight over chicken bones. Within ten minutes of arriving, police raid the building. Sandy is taken. An officer looks Paul in the eyes: <em>"I don't know who you are or what you are doing here, but I can see you shouldn't be here. GO HOME."</em> Paul does not go home. He makes four mugs of tea and waits.</p>
+  <p class="prose-dense">Sandy returns. She cries in his arms — they raped her, she needs drugs. Then her tears dry. <em>"Come; let's go raise some money. I want to have a good night."</em></p>
+  <p class="prose-dense">Sandy gets a job at Aquarius Escorts. Paul is intrigued by the name because he is an Aquarian — he sees it as a good sign. He walks her to work at eight, picks her up at eleven. She tells him people pay her to escort them to dinners. He is happy. He does not know what an escort does.</p>
+
+
+
+
+</section>
+
+
+
+<!-- ═══════════════════════════════════════════
+     SANDY + MATTRESS — Who she is / What she gave him
+     ═══════════════════════════════════════════ -->
+<section style="background:var(--bk);padding:0">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px" class="pair-grid">
+    <img src="images/image-14.png" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+    <img src="images/image-15.png" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     MOMENT: The first bath
+     ═══════════════════════════════════════════ -->
+<div class="moment" style="min-height:45vh">
+  <div>
+    <p class="moment-text"><span class="bright">"I don't want to be alone, so if you don't mind,<br>will you sit with me while I bathe?"</span></p>
+    <p class="moment-attr">Sandy — the first bathtub scene</p>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     MOONLIGHT — The neon hits his face
+     ═══════════════════════════════════════════ -->
+<section>
+  <img class="img-bleed" src="images/image-16.png" alt="" style="height:auto;max-width:100%">
+</section>
+
+
+
+<!-- ═══════════════════════════════════════════
+     ACT TWO continued — the descent
+     ═══════════════════════════════════════════ -->
+<section class="sec" style="background:var(--bk)">
+  <p class="prose-dense">He had never seen a naked woman. He kept his eyes on hers or on the floor. This became a daily ritual. No drugs, no people. Just Sandy and Paul. It was nice.</p>
+  <p class="prose-dense">Then came the first night at work. Sandy emerged from the car and shot straight inside. When she came out, something was wrong. She ran into his arms crying. She needed drugs right away. At Killmury she ran a bath. He sat at the foot of the tub. She told him how four men requested her. A garage. They made her remove her clothes. They placed her on the hood of the car. One revved the engine. The others inserted tools into her. They all had their way with her. She washed herself and continued to cry.</p>
+  <p class="prose-dense">He was fifteen. He could not comprehend parts of the story. But he sat there. Every night. Because she asked him to.</p>
+  <p class="prose-dense">She tells him she loves him. She buys him a Chelsea bun — the best food he has ever had. She spends every other cent on drugs. Their lives continue: sex for drugs, drugs for escape. Sleeping on a mattress on the floor. Sandy spent every penny she made. Life, for the most part, became a blur.</p>
+
+<!-- ═══════════════════════════════════════════
+     THE WEIGHT — Killmury life
+     ═══════════════════════════════════════════ -->
+<section>
+  <img src="images/image-17.png" alt="" style="width:100%;height:auto;display:block">
+</section>
+
+
+  <p class="prose-dense">Men with guns drag her naked from the bath by her hair. <em>"We are not interested in you; we want her."</em> A thump on the head with the barrel. They pull her down the corridor and into a car. Two hours later she is thrown into the street with her ID. She becomes very quiet after that. Even the bath talks become calm. Something is gone.</p>
+  <p class="prose-dense">Sandy moves in with a client. Paul is alone. Walking the streets. Begging money like Sandy taught him. From the Killmury balcony he watches police beat the rent boys. A man walks in the middle of the road covered in blood, screaming. No one helps. Paul is so numb he just watches. People come and go. Addicts steal each other's drugs. The dream of leaving seems further away. He realizes he is becoming just like them.</p>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     THE BATH — His perspective
+     ═══════════════════════════════════════════ -->
+<section>
+  <img src="images/image-18.png" alt="" style="width:100%;height:auto;display:block">
+</section>
+
+<!-- ═══════════════════════════════════════════
+     BATHTUB SPINE — The structural concept
+     ═══════════════════════════════════════════ -->
+<section style="background:var(--bk)">
+  <img src="images/image-19.png" alt="" style="width:100%;height:auto;display:block;opacity:.4;filter:contrast(1.2)">
+  <div style="padding:0 7vw 4vh;margin-top:-2.5rem;position:relative;z-index:2">
+    <div class="lbl">The Bathtub Spine</div>
+    <p style="font-size:.72rem;line-height:1.6;color:var(--lt);max-width:420px;margin-bottom:1rem">Five bathtub scenes. Same staging. Same two people. Everything else degrades.</p>
+    <div class="bath-row"><div class="bath-l">Innocence</div><div class="bath-r">Warm light. Clean water. <em>"I don't want to be alone."</em></div></div>
+    <div class="bath-row"><div class="bath-l">First Horror</div><div class="bath-r">Same positions. She tells the story. The water is the same. The light shifts.</div></div>
+    <div class="bath-row"><div class="bath-l">Routine</div><div class="bath-r">The stories come nightly. She washes mechanically. The water is grayer.</div></div>
+    <div class="bath-row"><div class="bath-l">Abduction</div><div class="bath-r">They dragged her from this bath. When she returns, something is gone.</div></div>
+    <div class="bath-row"><div class="bath-l">Paul Alone</div><div class="bath-r">Clean water. No one across from him. Home.</div></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     GREEN EYE — The neon cracking
+     ═══════════════════════════════════════════ -->
+<section>
+  <img class="img-bleed" src="images/image-20.png" alt="" style="height:auto">
+</section>
+
+<!-- ═══════════════════════════════════════════
+     BOY + CARDBOARD CITY
+     ═══════════════════════════════════════════ -->
+<section>
+  <div class="grid2" style="min-height:auto">
+    <img src="images/image-21.png" alt="" style="width:100%;height:100%;object-fit:cover">
+    <img src="images/image-22.png" alt="" style="width:100%;height:100%;object-fit:cover">
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     MOMENT: The alley
+     ═══════════════════════════════════════════ -->
+<div class="moment" style="min-height:55vh;background:var(--bk)">
+  <div>
+    <p class="moment-text" style="font-size:clamp(1.1rem,2.2vw,1.5rem);color:var(--bright)"><span class="bright">"What am I doing; what am I doing?"</span></p>
+    <p class="moment-attr">Paul — an empty street, two blocks from Killmury</p>
+  </div>
+</div>
+
+
+
+
+<!-- ═══════════════════════════════════════════
+     THE ROAD — The decision
+     ═══════════════════════════════════════════ -->
+<section>
+  <img src="images/image-23.png" alt="" style="width:100%;height:auto;display:block">
+</section>
+
+<!-- ═══════════════════════════════════════════
+     ACT THREE — Spacious. Air. The break.
+     ═══════════════════════════════════════════ -->
+<section class="sec" style="background:var(--bk2);padding-top:7vh;padding-bottom:7vh">
+  <div class="act-hd">ACT THREE — THE BREAK <span>The alley → The road → Home</span></div>
+  <p class="prose-air">He had been starving. He went from place to place in search of food and couldn't find a single morsel. He searched the clubs for Sandy and came up empty. Walking back to Killmury, he saw a man in a car touching himself. The thought came: <em>"If I could do that for him, I could get paid and eat."</em> He ran toward the car. The car sped away. He ran to the next block. Empty street.</p>
+  <p class="prose-air">He stopped in the middle of the road. For the first time in eighteen months, he heard his own voice.</p>
+  <p class="prose-air">He picks up his things. Walks to the highway. Thumb out. No goodbyes. No drugs. Nothing. He simply chooses to leave it all behind.</p>
+  <p class="prose-air" style="margin-top:1.5rem">A watermelon fallen from a truck. The first food in days. Sweet nectar rushing down his throat. A truck driver who needs someone to keep him awake. Paul nods off. The horn jolts him back. They ride like that the whole way.</p>
+  <p class="prose-air" style="color:var(--bright)">Durban at sunrise. The sky is orange. He has not noticed the sky in eighteen months.</p>
+  <p class="prose-air">A fancy car. Leather interior. He feels dirty sitting there. The man says nothing. Familiar landmarks through the window. Almost home.</p>
+  <p class="prose-air">He walks across the railway tracks. Stands outside his front door. He does not walk in.</p>
+  <p class="prose-air" style="margin-bottom:0">He knocks.</p>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     MOMENT: The father
+     ═══════════════════════════════════════════ -->
+<div class="moment" style="min-height:50vh;background:var(--bk)">
+  <div>
+    <p class="moment-text" style="font-size:clamp(1rem,1.8vw,1.25rem)"><span class="bright">"Why don't you clean up and get some rest?<br>We can talk later; I'm glad you are home."</span></p>
+    <p class="moment-attr">Paul's father</p>
+  </div>
+</div>
+
+
+
+<!-- ═══════════════════════════════════════════
+     THE FINAL BATH — image
+     ═══════════════════════════════════════════ -->
+<section>
+  <img class="img-bleed" src="images/image-24.png" alt="" style="height:55vh;object-position:center 40%">
+</section>
+
+<!-- ═══════════════════════════════════════════
+     THE FINAL BATH — one line
+     ═══════════════════════════════════════════ -->
+<div class="moment" style="min-height:35vh;background:var(--bk)">
+  <div>
+    <p style="font-family:&#39;Cormorant Garamond&#39;,serif;font-weight:300;font-size:clamp(.85rem,1.3vw,1.05rem);line-height:1.9;color:var(--lt);max-width:380px;text-align:center">Paul takes a bath. Clean water. No one across from him.<br>He falls asleep in his own bed.</p>
+    <p style="font-size:.72rem;color:var(--mid);margin-top:1.2rem;text-align:center">His parents never asked about those eighteen months.</p>
+  </div>
+</div>
+
+
+
+<!-- ═══════════════════════════════════════════
+     PAINTED FACE — The mask dissolving
+     ═══════════════════════════════════════════ -->
+<section>
+  <img src="images/image-25.png" alt="" style="width:100%;height:auto;display:block;opacity:.65">
+</section>
+
+<!-- ═══════════════════════════════════════════
+     COLOR ARCHITECTURE
+     ═══════════════════════════════════════════ -->
+<section class="sec" style="background:var(--bk)">
+  <div class="lbl">Color Architecture</div>
+  <div class="clr-row"><div class="clr-l" style="color:var(--mid)">Before Faces</div><div class="clr-r" style="color:var(--lt)">Desaturated. Almost monochrome. Paul's world has no color because Paul's world has no life.</div></div>
+  <div class="clr-row"><div class="clr-l" style="color:var(--gd)">Faces</div><div class="clr-r" style="color:var(--ow)">Neon hits. Purple, magenta, electric blue. Sandy lives in neon. Their relationship lives in neon.</div></div>
+  <div class="clr-row"><div class="clr-l" style="color:var(--gd)">The Crack</div><div class="clr-r" style="color:var(--ow)">The neon doesn't fade — it breaks. Tubes flicker. Color bleeds out the way a bruise changes. The audience doesn't notice until it's gone.</div></div>
+  <div class="clr-row"><div class="clr-l" style="color:var(--mid)">The Alley</div><div class="clr-r" style="color:var(--lt)">Near-monochrome. Sodium streetlight. Everyone looks like a corpse.</div></div>
+  <div class="clr-row"><div class="clr-l" style="color:#d4874a">Sunrise</div><div class="clr-r" style="color:var(--ow)">First natural warmth. Not neon. Sunlight. The audience hasn't seen real color in an hour.</div></div>
+  <div class="clr-row"><div class="clr-l" style="color:var(--bright)">The Bath</div><div class="clr-r" style="color:var(--bright)">White. Clean. No filter. Neutral. Home.</div></div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     CAMERA LANGUAGE
+     ═══════════════════════════════════════════ -->
+<section class="sec" style="background:var(--bk)">
+  <div class="lbl">Camera Language</div>
+  <div class="prose" style="margin-bottom:1.2rem">Handheld throughout. No cranes. No Steadicam. The audience lives inside Paul's body — they feel what he feels before they understand what they're seeing.</div>
+  <div class="clr-row"><div class="clr-l" style="color:var(--mid)">Umkomaas</div><div class="clr-r" style="color:var(--lt)">Restless. The camera drifts through empty rooms, looking for something to land on. It searches the way Paul searches. Wide frames, too much space, a boy who doesn't fill the shot.</div></div>
+  <div class="clr-row"><div class="clr-l" style="color:var(--gd)">The Train</div><div class="clr-r" style="color:var(--ow)">The frame tightens the moment he paints his face. From here forward the camera stays close. It chose him when he chose the mask.</div></div>
+  <div class="clr-row"><div class="clr-l" style="color:var(--gd)">Johannesburg</div><div class="clr-r" style="color:var(--ow)">Handheld becomes reactive. Flinching. The camera is no longer searching — it's bracing. Tight on faces. Tighter on hands. The world outside the frame is more dangerous than what's inside it.</div></div>
+  <div class="clr-row"><div class="clr-l" style="color:var(--mid)">The Baths</div><div class="clr-r" style="color:var(--lt)">Locked off. The only stillness in the film. Same angle, same distance, every time. Two people. The water changes. The light changes. The camera does not.</div></div>
+  <div class="clr-row"><div class="clr-l" style="color:var(--mid)">The Alley</div><div class="clr-r" style="color:var(--lt)">The camera stops moving. For the first time in an hour, it is completely still — and so is Paul. He hears his own voice. So does the audience.</div></div>
+  <div class="clr-row"><div class="clr-l" style="color:#d4874a">The Road</div><div class="clr-r" style="color:var(--ow)">Wide again. But not empty the way Umkomaas was empty. Full. The sky is in the frame for the first time. The camera breathes because Paul breathes.</div></div>
+  <div class="clr-row"><div class="clr-l" style="color:var(--bright)">The Final Bath</div><div class="clr-r" style="color:var(--ow)">Same locked-off angle. Same distance. One person. Clean water. The space where Sandy sat is the loudest silence in the film.</div></div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     CHARACTERS
+     ═══════════════════════════════════════════ -->
+<section class="sec" style="background:var(--bk2)">
+  <div class="lbl">Characters</div>
+  <div style="max-width:480px;margin-bottom:1.5rem">
+    <div style="font-family:&#39;Cormorant Garamond&#39;,serif;font-weight:600;font-size:1.1rem;color:var(--ww)">Paul Smit</div>
+    <div style="font-family:&#39;Barlow Condensed&#39;,sans-serif;font-size:.5rem;letter-spacing:.15em;color:var(--gd);margin-bottom:.4rem">15–16 · Actor: 16–21 · White South African · Lead</div>
+    <p class="prose">Lonely, creative, misaligned. Builds cardboard cities and sleeps on the couch. He is not broken — he is looking for a place that fits. Sandy becomes that place. The performance demands physical transformation: the harlequin at the start, the gradual stripping, the boy who knocks on his own door. Most of this role is in the eyes.</p>
+  </div>
+  <div style="max-width:480px;margin-bottom:1.5rem">
+    <div style="font-family:&#39;Cormorant Garamond&#39;,serif;font-weight:600;font-size:1.1rem;color:var(--ww)">Sandy</div>
+    <div style="font-family:&#39;Barlow Condensed&#39;,sans-serif;font-size:.5rem;letter-spacing:.15em;color:var(--gd);margin-bottom:.4rem">Mid-to-late 20s · Actor: 25–32 · White South African · Lead</div>
+    <p class="prose">Magnetic. Methodical. Damaged beyond repair and incandescent with life at the same time. She is not a villain. The age gap sits in every scene without ever being named. The audience carries it. Paul does not.</p>
+  </div>
+  <div style="padding-top:.8rem;border-top:1px solid var(--dk2);max-width:480px">
+    <div class="lbl">Supporting</div>
+    <p style="font-size:.78rem;line-height:1.6;color:var(--lt)"><strong style="color:var(--ow);font-weight:500">Neil</strong> — <em>"She is a world of trouble."</em> <strong style="color:var(--ow);font-weight:500">Jackie</strong> — bursts out of a cubicle clutching money, cannot stop crying. <strong style="color:var(--ow);font-weight:500">Wayne</strong> — dragged down stairs by his feet. <strong style="color:var(--ow);font-weight:500">Shaun</strong> — first real friend, the motorbike, two lost brothers. <strong style="color:var(--ow);font-weight:500">The Woman Across the Tracks</strong> — made the harlequin. <strong style="color:var(--ow);font-weight:500">The Conductor</strong> — one scene, one question.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     LOCATIONS
+     ═══════════════════════════════════════════ -->
+<section style="background:var(--bk)">
+  <img src="images/image-26.png" alt="" style="width:100%;height:auto;display:block;filter:saturate(.6)">
+  <div style="padding:1.5rem 7vw 4vh">
+    <div class="lbl">Locations</div>
+    
+    <p style="font-size:.75rem;line-height:1.6;color:var(--lt);max-width:440px;margin-top:.8rem">Principal photography in South Africa. KwaZulu-Natal coast and Johannesburg inner city. All memoir locations still exist. 1983 setting. Apartheid is the air, not the story. SA film incentive: 20–25% rebate.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     COMPS
+     ═══════════════════════════════════════════ -->
+<section class="sec" style="background:var(--bk2)">
+  <div class="lbl">Comparable Films</div>
+  
+    <div style="font-size:.52rem;color:var(--gd);letter-spacing:.06em;margin-bottom:.3rem">1981  ·  $2M  ·  Berlin Film Festival</div>
+    <p style="font-size:.75rem;line-height:1.55;color:var(--lt)">The definitive drug-descent film. LIFE HURTS shares the structural DNA but adds the bathtub confessional and relocates to apartheid South Africa.</p>
+  
+  <div class="cmp">
+    <div style="font-family:&#39;Barlow Condensed&#39;,sans-serif;font-weight:600;font-size:.78rem;color:var(--ww);letter-spacing:.04em">TSOTSI</div>
+    <div style="font-size:.52rem;color:var(--gd);letter-spacing:.06em;margin-bottom:.3rem">2005  ·  $3M  ·  Academy Award — Best Foreign Language Film</div>
+    <p style="font-size:.75rem;line-height:1.55;color:var(--lt)">Proved the global appetite for raw South African stories with unknown actors.</p>
+    <img src="images/image-27.png" alt="" style="width:100%;height:auto;object-fit:cover;margin-top:.6rem">
+  </div>
+  <div class="cmp">
+    <div style="font-family:&#39;Barlow Condensed&#39;,sans-serif;font-weight:600;font-size:.78rem;color:var(--ww);letter-spacing:.04em">MOONLIGHT</div>
+    <div style="font-size:.52rem;color:var(--gd);letter-spacing:.06em;margin-bottom:.3rem">2016  ·  $4M  ·  Academy Award — Best Picture</div>
+    <p style="font-size:.75rem;line-height:1.55;color:var(--lt)">Three-act architecture. Identity through intimacy. LIFE HURTS uses the bathtub where Moonlight uses the ocean.</p>
+    <img src="images/image-28.png" alt="" style="width:100%;height:auto;object-fit:cover;margin-top:.6rem">
+  </div>
+  <div class="cmp">
+    <div style="font-family:&#39;Barlow Condensed&#39;,sans-serif;font-weight:600;font-size:.78rem;color:var(--ww);letter-spacing:.04em">FISH TANK</div>
+    <div style="font-size:.52rem;color:var(--gd);letter-spacing:.06em;margin-bottom:.3rem">2009  ·  $3M  ·  Cannes Jury Prize</div>
+    <p style="font-size:.75rem;line-height:1.55;color:var(--lt)">A teenage girl, an older man who enters her world with charisma and danger. Andrea Arnold's camera never flinches. LIFE HURTS inverts the gender dynamic — Sandy is the older figure, Paul the child — but the power imbalance is identical.</p>
+    <img src="images/image-29.png" alt="" style="width:100%;height:auto;object-fit:cover;margin-top:.6rem">
+  </div>
+  <div style="margin-top:1rem;padding-top:1rem;border-top:2px solid var(--gd);max-width:460px">
+    <p style="font-size:.8rem;line-height:1.65;color:var(--ow);font-weight:400">No existing film combines a teenage male protagonist, a magnetic female co-lead driving the descent, the bathtub-as-narrative-spine, and a 1980s South African setting. The male victim of emotional exploitation by a female figure is one of the most underrepresented dynamics on screen. Every comp was under $5M. Every one won major awards. That is the lane.</p>
+  </div>
+
+<!-- ═══════════════════════════════════════════
+     PAUL — The real person
+     ═══════════════════════════════════════════ -->
+    <img src="images/image-30.png" alt="" style="width:100%;height:auto;object-fit:cover;margin-top:.6rem">
+    <p style="font-family:&#39;Barlow Condensed&#39;,sans-serif;font-weight:400;font-size:.48rem;letter-spacing:.25em;color:var(--mid);text-transform:uppercase;margin-top:5px">Paul Smit — today</p>
+
+</section>
+
+<!-- ═══════════════════════════════════════════
+     PRODUCTION — The business. Clear the table.
+     ═══════════════════════════════════════════ -->
+<section class="sec" style="background:var(--bk2);border-top:1px solid var(--dk2)">
+  <div style="display:flex;align-items:flex-start;gap:3rem">
+    <img src="images/image-05.jpg" alt="" style="width:30px;opacity:.3;flex-shrink:0;margin-top:.2rem">
+    <div>
+      <div style="font-family:&#39;Cormorant Garamond&#39;,serif;font-weight:600;font-size:1rem;color:var(--ww)">ReelSage Studios</div>
+      <p style="font-size:.72rem;color:var(--ow);margin-bottom:.05rem">Ayla Demirci — Writer / Director / Producer</p>
+      <p style="font-size:.58rem;color:var(--mid);margin-bottom:1.2rem">Nashville, TN</p>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1.5rem;max-width:400px">
+        <div>
+          <div style="font-family:&#39;Barlow Condensed&#39;,sans-serif;font-weight:500;font-size:.45rem;letter-spacing:.22em;color:var(--gd);text-transform:uppercase;margin-bottom:.2rem">Festival Strategy</div>
+          <p style="font-size:.68rem;line-height:1.5;color:var(--lt)">Toronto, Berlin, or Cannes (Un Certain Regard). SA premiere: Durban International.</p>
+        </div>
+        <div>
+          <div style="font-family:&#39;Barlow Condensed&#39;,sans-serif;font-weight:500;font-size:.45rem;letter-spacing:.22em;color:var(--gd);text-transform:uppercase;margin-bottom:.2rem">Casting</div>
+          <p style="font-size:.68rem;line-height:1.5;color:var(--lt)">South African talent. Open call Durban + Johannesburg. Unknown leads.</p>
+        </div>
+      </div>
+
+      <p style="font-family:&#39;Barlow Condensed&#39;,sans-serif;font-size:.48rem;letter-spacing:.35em;color:var(--gd);text-transform:uppercase;margin-top:1.2rem">Raw. Gritty. Bold.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     PAUL'S WORDS — The last line before credits
+     ═══════════════════════════════════════════ -->
+<div class="moment" style="min-height:45vh;background:var(--bk)">
+  <div>
+    <p class="moment-text" style="font-size:clamp(.9rem,1.5vw,1.15rem)">"You cannot always tell where you are going,<br>yet in the end, you will know why you were there."</p>
+    <p class="moment-attr">Paul Smit</p>
+  </div>
+</div>
+
+
+
+
+
+</body></html>
