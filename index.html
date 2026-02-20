@@ -64,39 +64,54 @@ html{
 }
 
 /* ══════════════════════════════════════════════════
-   HERO
+   HERO — Movie Poster Style
    ══════════════════════════════════════════════════ */
 .hero{
-  height:100vh;position:relative;overflow:hidden;
-  background:var(--bk);display:flex;align-items:flex-end;
+  min-height:auto;
+  position:relative;
+  overflow:hidden;
+  background:var(--bk);
+  display:block;
+  padding:0;
 }
 .hero-bg{
-  position:absolute;top:0;right:0;width:58%;height:100%;
-  object-fit:cover;object-position:center top;
-  opacity:.4;filter:grayscale(15%) contrast(1.2);
-  mask-image:linear-gradient(to right,transparent 0%,black 40%);
-  -webkit-mask-image:linear-gradient(to right,transparent 0%,black 40%);
+  position:relative;
+  width:100%;
+  height:auto;
+  object-fit:contain;
+  object-position:center center;
+  opacity:1;
+  filter:none;
+  mask-image:none;
+  -webkit-mask-image:none;
 }
 .hero-content{
-  position:relative;z-index:2;padding:0 6vw 6vh;max-width:500px;
+  position:relative;z-index:2;
+  max-width:600px;width:100%;
+  text-align:center;
+  padding:3rem 2rem;
+  display:none;
 }
 .hero h1{
   font-family:'Cormorant Garamond',serif;font-weight:300;
-  font-size:clamp(2.4rem,5.5vw,4.2rem);letter-spacing:.24em;
-  color:var(--bright);line-height:1;margin-bottom:.5rem;
+  font-size:clamp(3rem,8vw,5.5rem);letter-spacing:.28em;
+  color:var(--bright);line-height:.95;
+  text-transform:uppercase;
 }
 .hero-sub{
-  font-weight:200;font-size:.72rem;color:var(--gd);
-  letter-spacing:.08em;line-height:1.6;margin-bottom:2rem;
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:300;font-size:clamp(.65rem,1.2vw,.8rem);color:var(--gd);
+  letter-spacing:.32em;line-height:1.6;text-transform:uppercase;
 }
 .hero-logline{
   font-family:'Cormorant Garamond',serif;font-weight:300;font-style:italic;
-  font-size:clamp(.85rem,1.15vw,1rem);line-height:1.9;
-  color:var(--sl);
+  font-size:clamp(.95rem,1.8vw,1.15rem);line-height:1.85;
+  color:var(--ow);max-width:520px;margin:0 auto;
 }
 .hero-meta{
-  margin-top:1.8rem;font-family:'Barlow Condensed',sans-serif;font-weight:400;
-  font-size:.55rem;letter-spacing:.22em;color:var(--mid);text-transform:uppercase;
+  font-family:'Barlow Condensed',sans-serif;font-weight:400;
+  font-size:clamp(.5rem,1vw,.6rem);letter-spacing:.28em;
+  color:var(--mid);text-transform:uppercase;
 }
 
 /* ══════════════════════════════════════════════════
@@ -170,14 +185,20 @@ img{max-width:100%;height:auto}
 
 /* Grid images on mobile */
 @media(max-width:768px){
-  .hero{height:100svh;align-items:flex-end}
-  .hero-bg{width:100%;opacity:.3;
-    mask-image:linear-gradient(to top,transparent 0%,black 40%);
-    -webkit-mask-image:linear-gradient(to top,transparent 0%,black 40%);
+  .hero{min-height:auto;padding:0;display:block}
+  .hero-bg{
+    position:relative;
+    opacity:1;
+    mask-image:none;
+    -webkit-mask-image:none;
+    filter:none;
+    width:100%;
+    height:auto;
+    object-fit:contain;
   }
-  .hero-content{padding:0 5vw 5vh;max-width:100%}
-  .hero h1{font-size:2.2rem;letter-spacing:.18em}
-  .hero-logline{font-size:.88rem}
+  .hero-content{display:none}
+  .hero h1{font-size:2.8rem;letter-spacing:.22em;line-height:.98}
+  .hero-logline{font-size:.95rem;line-height:1.75}
 
   .moment{min-height:40vh;padding:8vh 6vw}
   .moment-text{font-size:1rem !important}
@@ -250,24 +271,23 @@ p{max-width:min(100%,580px)}
      THE HARLEQUIN
      ═══════════════════════════════════════════ -->
 <section class="hero">
-  <img class="hero-bg" src="images/image-01.jpg" alt="">
+  <img class="hero-bg" src="movieposter.jpeg" alt="">
   <div class="hero-content">
-    <p class="hero-sub" style="margin-bottom:1.5rem">Based on a true story. South Africa, 1983.</p>
-    <h1 style="margin-bottom:1.8rem">LIFE HURTS</h1>
-    <p class="hero-logline" style="margin-bottom:2.5rem">A fifteen-year-old boy paints himself into a harlequin to escape his small-town invisibility — and is swept into the streets of Johannesburg by a magnetic, damaged woman who promises to look after him. Over eighteen months of drugs, sex work, and survival, he discovers that the mask he built to be seen is the same mask he must remove to stay alive.</p>
+    <p class="hero-sub" style="margin-bottom:2.5rem">Based on a true story  ·  South Africa  ·  1983</p>
+    <h1 style="margin-bottom:2.8rem">LIFE HURTS</h1>
+    <p class="hero-logline" style="margin-bottom:3.5rem">A fifteen-year-old boy paints himself into a harlequin to escape his small-town invisibility — and is swept into the streets of Johannesburg by a magnetic, damaged woman who promises to look after him. Over eighteen months of drugs, sex work, and survival, he discovers that the mask he built to be seen is the same mask he must remove to stay alive.</p>
     <p class="hero-meta">Feature Film  ·  100–115 min  ·  Drama  ·  $2–5M</p>
   </div>
   
 </section>
 
 <!-- ═══════════════════════════════════════════
-     SANDY — She stops everything.
+     THE DESCENT
      ═══════════════════════════════════════════ -->
 <div class="moment" style="min-height:60vh;background:var(--bk)">
-  <div style="max-width:380px">
-    <div class="lbl" style="text-align:center">Sandy</div>
-    <p class="moment-text" style="text-align:center;font-size:clamp(.88rem,1.3vw,1.08rem)">No last name. One photograph.<br>Eighteen months that almost erased him.</p>
-    <p style="font-size:.72rem;line-height:1.7;color:var(--lt);text-align:center;margin-top:1.5rem">She washes his face like a mother.<br>Then forges prescriptions with surgical precision.<br>Then spends every cent on drugs.<br>Then asks him to sit with her in the bath<br>because she cannot bear to be alone.</p>
+  <div style="max-width:480px">
+    <p class="moment-text" style="text-align:center;font-size:clamp(.95rem,1.5vw,1.15rem);line-height:1.85">Paul Smit was fifteen when he painted his face and vanished into the streets of Johannesburg. Eighteen months beneath the surface — addiction, violence, sex work.</p>
+    <p style="font-family:'Barlow Condensed',sans-serif;font-weight:500;font-size:clamp(.6rem,1.2vw,.75rem);letter-spacing:.35em;color:var(--gd);text-transform:uppercase;text-align:center;margin-top:2rem">Survival</p>
   </div>
 </div>
 
@@ -289,11 +309,13 @@ p{max-width:min(100%,580px)}
 <section class="sec" style="background:var(--bk2)">
   <img src="images/image-05.jpg" alt="" style="width:30px;opacity:.35;margin-bottom:1.5rem">
   <div class="lbl">Filmmaker's Vision</div>
-  <div style="max-width:480px">
-    <p class="prose">Paul Smit trusted me with this story. He has one photograph of Sandy. One image from eighteen months that almost erased him. When a person gives you that — their worst memories, their trust that you will not sensationalize what nearly destroyed them — you do not take it lightly.</p>
-    <p class="prose">I am not making a drug film. I am making a film about what it feels like to be fifteen and invisible — and what happens when the first person who finally sees you is also the person who will cost you everything.</p>
-    <p class="prose">That gap — between what Paul believes is happening and what the audience knows is happening — is the engine of every scene. It never stops running.</p>
-    <p class="prose">There is no sexual relationship between Paul and Sandy. The intimacy is entirely emotional — and that is precisely what makes it so difficult to escape. She needs a witness. He needs to be needed. That contract is more binding than anything physical, and nearly as destructive.</p>
+  <div style="max-width:520px">
+    <p class="prose">Paul Smit entrusted me with a story that has haunted him for years — a single photograph of Sandy, a fragment of memory that carries the weight of a lifetime. That kind of trust is sacred, and it demands a filmmaker's deepest commitment: to illuminate the truth without exploitation, to honor memory without compromise.</p>
+    <p class="prose">This is not a film about drugs. It is a film about what it feels like to be fifteen and invisible, and the precarious, intoxicating danger of being seen for the first time by someone who will shape the course of your life in ways you cannot yet understand.</p>
+    <p class="prose">The engine of this story is the tension between what Paul believes is happening and what the audience knows to be true — a gap that runs through every scene, subtle and relentless, building a psychological and emotional resonance that stays long after the film ends.</p>
+    <p class="prose">Paul and Sandy share a bond that exists entirely in the emotional realm — fierce, maternal, and at times unbearably predatory. She watches over him with a vigilance that leaves no corner of his life untouched, guiding him, holding him, shaping him in ways he cannot escape. He clings to her care, hungers for her attention, and cannot distinguish the safety she offers from the peril it carries. Their connection is sustaining and destabilizing, tender and consuming, a force that binds them together and marks them both in ways nothing else could — a quiet, relentless gravity that defines the contours of their lives.</p>
+    <p class="prose">Set in 1983 South Africa, at the height of apartheid violence, this story takes place in a society defined by systemic oppression, political brutality, and constant uncertainty. Amid curfews, raids, and pervasive fear, young people carved out hidden spaces for expression and survival, including underground alternative goth and harlequin scenes — a subculture largely invisible in cinema.</p>
+    <p class="prose">Within this world, the film explores untapped portrayals of gender and power: Sandy, an older woman whose maternal yet predatory presence defies conventional cinematic roles, and Paul, a young straight boy navigating survival, identity, and self-expression on society's margins. Both characters inhabit territory rarely seen on screen, offering audiences a story that challenges assumptions, illuminates invisible dynamics, and expands the emotional and social vocabulary of contemporary film.</p>
   </div>
   <div style="text-align:right;max-width:480px;margin-top:1rem">
     <span style="font-family:&#39;Cormorant Garamond&#39;,serif;font-style:italic;font-size:.88rem;color:var(--gd)">— Ayla Demirci</span>
