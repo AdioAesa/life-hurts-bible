@@ -117,7 +117,7 @@ html{
 /* ══════════════════════════════════════════════════
    IMAGE LAYOUTS
    ══════════════════════════════════════════════════ */
-.img-bleed{width:100%;display:block;height:auto}
+.img-bleed{width:100%;display:block;height:auto;object-fit:contain}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:2px}
 .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
 .grid2 img,.grid3 img{width:100%;height:auto;object-fit:cover;display:block}
@@ -224,7 +224,7 @@ img{max-width:100%;height:auto}
 
   .lbl{font-size:.48rem;letter-spacing:.3em}
 
-  .img-bleed{height:40vh}
+  .img-bleed{max-height:50vh;object-fit:contain}
 
   .contact{padding:5vh 5vw}
 }
@@ -324,6 +324,25 @@ p{max-width:min(100%,580px)}
 </section>
 
 <!-- ═══════════════════════════════════════════
+     LOCATIONS
+     ═══════════════════════════════════════════ -->
+<section style="background:var(--bk)">
+  <img src="images/image-26.png" alt="" style="width:100%;height:auto;display:block;filter:saturate(.6)">
+  <div style="padding:1.5rem 7vw 4vh">
+    <div class="lbl">Locations</div>
+
+    <p style="font-size:.75rem;line-height:1.6;color:var(--lt);max-width:440px;margin-top:.8rem">Principal photography in South Africa. KwaZulu-Natal coast and Johannesburg inner city. All memoir locations still exist. 1983 setting. Apartheid is the air, not the story. SA film incentive: 20–25% rebate.</p>
+    
+    <div style="margin-top:2.5rem;display:flex;justify-content:center">
+      <div style="max-width:320px;text-align:center">
+        <img src="images/image-10.jpg" alt="" style="width:100%;height:auto;display:block">
+        <p style="font-family:'Barlow Condensed',sans-serif;font-weight:400;font-size:.48rem;letter-spacing:.3em;color:var(--mid);text-transform:uppercase;margin-top:6px">Faces — Durban</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
      THE WORLD — Proof it existed
      ═══════════════════════════════════════════ -->
 <section style="background:var(--bk);padding:6vh 5vw 5vh;border-top:1px solid var(--dk2)">
@@ -331,14 +350,14 @@ p{max-width:min(100%,580px)}
   
   <div class="grid2" style="height:auto">
     <img src="images/image-06.jpg" alt="">
+    <img src="images/image-08.jpg" alt="" style="object-position:center top">
+  </div>
+  <div style="padding:0 3vw"><p class="cap">Left: Paul with white face paint and yellow hue. Right: Helge with pink background.</p></div>
+  <div class="grid2" style="margin-top:2px">
+    <img src="images/image-09.jpg" alt="" style="object-position:center top">
     <img src="images/image-07.jpg" alt="">
   </div>
-  <div style="padding:0 3vw"><p class="cap">Left: Paul. Right: Inside the club — performance, costume, identity.</p></div>
-  <div class="grid2" style="margin-top:2px">
-    <img src="images/image-08.jpg" alt="" style="object-position:center top">
-    <img src="images/image-09.jpg" alt="" style="object-position:center top">
-  </div>
-  <div style="padding:0 3vw"><p class="cap"><b>Helge</b> — DJ at Faces.   <b>Ruby</b> — a regular.</p></div>
+  <div style="padding:0 3vw"><p class="cap">Left: Helga B&W. Right: The dancer in the club — Ruby, a regular.</p></div>
   
 </section>
 
@@ -354,15 +373,14 @@ p{max-width:min(100%,580px)}
   </div>
 </div>
 
+
 <!-- ═══════════════════════════════════════════
-     FACES — The answer
+     THE TRAIN — The journey begins
      ═══════════════════════════════════════════ -->
-<section style="background:var(--bk);padding:5vh 7vw;display:flex;justify-content:center">
-  <div style="max-width:420px;text-align:center">
-    <img src="images/image-10.jpg" alt="" style="width:100%;height:auto;display:block">
-    <p style="font-family:&#39;Barlow Condensed&#39;,sans-serif;font-weight:400;font-size:.48rem;letter-spacing:.3em;color:var(--mid);text-transform:uppercase;margin-top:6px">Faces — Durban</p>
-  </div>
+<section>
+  <img class="img-bleed" src="images/image-12.png" alt="" style="height:auto;opacity:.65;max-width:100%">
 </section>
+
 
 <!-- ═══════════════════════════════════════════
      FACES INTERIOR — What's inside
@@ -371,13 +389,6 @@ p{max-width:min(100%,580px)}
   <img src="images/image-11.png" alt="" style="width:100%;height:auto;display:block">
 </section>
 
-
-<!-- ═══════════════════════════════════════════
-     THE TRAIN — The journey begins
-     ═══════════════════════════════════════════ -->
-<section>
-  <img class="img-bleed" src="images/image-12.png" alt="" style="height:auto;opacity:.65;max-width:100%">
-</section>
 
 
 <!-- ═══════════════════════════════════════════
@@ -412,6 +423,13 @@ p{max-width:min(100%,580px)}
   <p class="prose-dense">Sandy returns. She cries in his arms — they raped her, she needs drugs. Then her tears dry. <em>"Come; let's go raise some money. I want to have a good night."</em></p>
   <p class="prose-dense">Sandy gets a job at Aquarius Escorts. Paul is intrigued by the name because he is an Aquarian — he sees it as a good sign. He walks her to work at eight, picks her up at eleven. She tells him people pay her to escort them to dinners. He is happy. He does not know what an escort does.</p>
 
+<!-- ═══════════════════════════════════════════
+     MOONLIGHT — The neon hits his face
+     ═══════════════════════════════════════════ -->
+<section>
+  <img class="img-bleed" src="images/image-16.png" alt="" style="height:auto;max-width:100%">
+</section>
+
 
 
 
@@ -439,12 +457,6 @@ p{max-width:min(100%,580px)}
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════════
-     MOONLIGHT — The neon hits his face
-     ═══════════════════════════════════════════ -->
-<section>
-  <img class="img-bleed" src="images/image-16.png" alt="" style="height:auto;max-width:100%">
-</section>
 
 
 
@@ -473,14 +485,14 @@ p{max-width:min(100%,580px)}
      THE BATH — His perspective
      ═══════════════════════════════════════════ -->
 <section>
-  <img src="images/image-18.png" alt="" style="width:100%;height:auto;display:block">
+  <img src="images/image-18.png" alt="" style="width:100%;height:auto;display:block;object-fit:contain">
 </section>
 
 <!-- ═══════════════════════════════════════════
      BATHTUB SPINE — The structural concept
      ═══════════════════════════════════════════ -->
 <section style="background:var(--bk)">
-  <img src="images/image-19.png" alt="" style="width:100%;height:auto;display:block;opacity:.4;filter:contrast(1.2)">
+  <img src="images/image-19.png" alt="" style="width:100%;height:auto;display:block;object-fit:contain;opacity:.4;filter:contrast(1.2)">
   <div style="padding:0 7vw 4vh;margin-top:-2.5rem;position:relative;z-index:2">
     <div class="lbl">The Bathtub Spine</div>
     <p style="font-size:.72rem;line-height:1.6;color:var(--lt);max-width:420px;margin-bottom:1rem">Five bathtub scenes. Same staging. Same two people. Everything else degrades.</p>
@@ -542,6 +554,23 @@ p{max-width:min(100%,580px)}
   <p class="prose-air">A fancy car. Leather interior. He feels dirty sitting there. The man says nothing. Familiar landmarks through the window. Almost home.</p>
   <p class="prose-air">He walks across the railway tracks. Stands outside his front door. He does not walk in.</p>
   <p class="prose-air" style="margin-bottom:0">He knocks.</p>
+
+<!-- ═══════════════════════════════════════════
+     THE FINAL BATH — image
+     ═══════════════════════════════════════════ -->
+<section>
+  <img class="img-bleed" src="images/image-24.png" alt="" style="width:100%;max-height:60vh;object-fit:contain;object-position:center">
+</section>
+
+<!-- ═══════════════════════════════════════════
+     THE FINAL BATH — one line
+     ═══════════════════════════════════════════ -->
+<div class="moment" style="min-height:35vh;background:var(--bk)">
+  <div>
+    <p style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(.85rem,1.3vw,1.05rem);line-height:1.9;color:var(--lt);max-width:380px;text-align:center">Paul takes a bath. Clean water. No one across from him.<br>He falls asleep in his own bed.</p>
+    <p style="font-size:.72rem;color:var(--mid);margin-top:1.2rem;text-align:center">His parents never asked about those eighteen months.</p>
+  </div>
+</div>
 </section>
 
 <!-- ═══════════════════════════════════════════
@@ -556,22 +585,6 @@ p{max-width:min(100%,580px)}
 
 
 
-<!-- ═══════════════════════════════════════════
-     THE FINAL BATH — image
-     ═══════════════════════════════════════════ -->
-<section>
-  <img class="img-bleed" src="images/image-24.png" alt="" style="max-height:55vh;object-fit:contain;object-position:center 40%">
-</section>
-
-<!-- ═══════════════════════════════════════════
-     THE FINAL BATH — one line
-     ═══════════════════════════════════════════ -->
-<div class="moment" style="min-height:35vh;background:var(--bk)">
-  <div>
-    <p style="font-family:&#39;Cormorant Garamond&#39;,serif;font-weight:300;font-size:clamp(.85rem,1.3vw,1.05rem);line-height:1.9;color:var(--lt);max-width:380px;text-align:center">Paul takes a bath. Clean water. No one across from him.<br>He falls asleep in his own bed.</p>
-    <p style="font-size:.72rem;color:var(--mid);margin-top:1.2rem;text-align:center">His parents never asked about those eighteen months.</p>
-  </div>
-</div>
 
 
 
@@ -630,19 +643,6 @@ p{max-width:min(100%,580px)}
     <p style="font-size:.78rem;line-height:1.6;color:var(--lt)"><strong style="color:var(--ow);font-weight:500">Neil</strong> — <em>"She is a world of trouble."</em> <strong style="color:var(--ow);font-weight:500">Jackie</strong> — bursts out of a cubicle clutching money, cannot stop crying. <strong style="color:var(--ow);font-weight:500">Wayne</strong> — dragged down stairs by his feet. <strong style="color:var(--ow);font-weight:500">Shaun</strong> — first real friend, the motorbike, two lost brothers. <strong style="color:var(--ow);font-weight:500">The Woman Across the Tracks</strong> — made the harlequin. <strong style="color:var(--ow);font-weight:500">The Conductor</strong> — one scene, one question.</p>
   </div>
 </section>
-
-<!-- ═══════════════════════════════════════════
-     LOCATIONS
-     ═══════════════════════════════════════════ -->
-<section style="background:var(--bk)">
-  <img src="images/image-26.png" alt="" style="width:100%;height:auto;display:block;filter:saturate(.6)">
-  <div style="padding:1.5rem 7vw 4vh">
-    <div class="lbl">Locations</div>
-    
-    <p style="font-size:.75rem;line-height:1.6;color:var(--lt);max-width:440px;margin-top:.8rem">Principal photography in South Africa. KwaZulu-Natal coast and Johannesburg inner city. All memoir locations still exist. 1983 setting. Apartheid is the air, not the story. SA film incentive: 20–25% rebate.</p>
-  </div>
-</section>
-
 <!-- ═══════════════════════════════════════════
      COMPS
      ═══════════════════════════════════════════ -->
